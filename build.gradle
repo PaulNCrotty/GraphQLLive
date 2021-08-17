@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.sofi.learning'
+version '0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation("org.springframework.boot:spring-boot-starter:${project.springBootVersion}")
+    implementation("org.springframework.boot:spring-boot-starter-web:${project.springBootVersion}")
+
+    implementation("com.graphql-java:graphql-spring-boot-starter:${project.graphQLVersion}")
+    implementation("com.graphql-java:graphiql-spring-boot-starter:${project.graphQLVersion}")
+    implementation("com.graphql-java:voyager-spring-boot-starter:${project.graphQLVersion}")
+
+    compileOnly("org.projectlombok:lombok:${project.lombokVersion}")
+    annotationProcessor("org.projectlombok:lombok:${project.lombokVersion}")
+
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:${project.junitVersion}")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:${project.junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}

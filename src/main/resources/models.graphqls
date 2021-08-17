@@ -1,0 +1,26 @@
+schema {
+    query: Queries
+}
+
+type Queries {
+    animal: [Animal]
+    dog: [Dog]
+    cat: [Cat]
+}
+
+type Animal {
+    age: Int
+    name: String!
+}
+
+type Dog {
+    age: Int
+    name: String!
+    breed: String  # oh... did we spell this correctly? dún-dùn-dūn.
+}
+
+type Cat {
+    age: Int
+    name: String!
+    owner: String
+}
